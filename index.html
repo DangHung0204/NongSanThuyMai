@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nông Sản Thúy Mai</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background: #28a745;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            background: #218838;
+        }
+
+        nav ul li {
+            padding: 1rem;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            width: 80%;
+            margin: 2rem auto;
+        }
+
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .product {
+            background: white;
+            padding: 1rem;
+            border-radius: 5px;
+            width: calc(33% - 2rem);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .product img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .product h2 {
+            font-size: 1.5rem;
+            margin: 1rem 0;
+        }
+
+        .product p {
+            color: #666;
+        }
+
+        .product .price {
+            font-size: 1.2rem;
+            color: #e74c3c;
+            font-weight: bold;
+            margin: 1rem 0;
+        }
+
+        .product button {
+            background-color: #28a745;
+            color: white;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .product button:hover {
+            background-color: #218838;
+        }
+
+        .product:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            background: #28a745;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Chuyên Cung Cấp Nông Sản / Đặc Sản Phan Rang - Đăk Lăk </h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#">Trang Chủ</a></li>
+            <li><a href="#">Sản Phẩm</a></li>
+            <li><a href="#">Liên Hệ</a></li>
+            <li><a href="#">Giới Thiệu</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h2>Sản Phẩm Nổi Bật</h2>
+        <div class="products">
+            <div class="product">
+                <img src="tao.jpg" alt="Táo Phan Rang">
+                <h2>Táo Phan Rang</h2>
+                <p>Sản phẩm tươi ngon, được thu hoạch từ nhà vườn.</p>
+                <div class="price">50.000 đ/kg</div>
+                <button>Mua Ngay</button>
+            </div>
+
+            <div class="product">
+                <img src="oi.jpg" alt="Ổi Phan Rang">
+                <h2>Ổi Phan Rang</h2>
+                <p>Sản phẩm tươi ngon, được thu hoạch từ nhà vườn.</p>
+                <div class="price">50.000 đ/kg</div>
+                <button>Mua Ngay</button>
+            </div>
+
+            <div class="product">
+                <img src="nho.webp" alt="Nho Phan Rang">
+                <h2>Nho Phan Rang</h2>
+                <p>Sản phẩm tươi ngon, được thu hoạch từ nhà vườn.</p>
+                <div class="price">500.000 đ/kg</div>
+                <button>Mua Ngay</button>
+            </div>
+
+	    <div class="product">
+                <img src="nho.webp" alt="Cà Phê Trộn">
+                <h2>Cà Phê Trộn</h2>
+                <p>Sản phẩm tươi ngon, được thu hoạch từ nhà vườn.</p>
+                <div class="price">500.000 đ/kg</div>
+                <button>Mua Ngay</button>
+            </div>
+
+	    <div class="product">
+                <img src="nho.webp" alt="Tiêu hạt Đăk Lăk">
+                <h2>Tiêu hạt Đăk Lăk</h2>
+                <p>Sản phẩm tươi ngon, được thu hoạch từ nhà vườn.</p>
+                <div class="price">500.000 đ/kg</div>
+                <button>Mua Ngay</button>
+            </div>
+
+	    <div class="product">
+                <img src="nho.webp" alt="Hạt Măc Ca">
+                <h2>Hạt Măc Ca</h2>
+                <p>Sản phẩm tươi ngon, được thu hoạch từ nhà vườn.</p>
+                <div class="price">500.000 đ/kg</div>
+                <button>Mua Ngay</button>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Cửa Hàng Nông Sản. Mọi quyền được bảo lưu.</p>
+    </footer>
+</body>
+</html>
