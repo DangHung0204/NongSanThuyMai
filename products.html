@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nông Sản Thúy Mai</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background: #28a745;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            background: #218838;
+        }
+
+        nav ul li {
+            padding: 1rem;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            width: 80%;
+            margin: 2rem auto;
+        }
+
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: space-between; /* Căn các sản phẩm đều trong hàng ngang */
+        }
+
+        .product {
+            background: white;
+            padding: 1rem;
+            border-radius: 5px;
+            width: calc(30% - 1rem); /* Chia thành 3 cột cân đối */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        /* Đảm bảo sản phẩm full width khi màn hình nhỏ */
+        @media (max-width: 768px) {
+            .product {
+                width: calc(48% - 1rem); /* Chia thành 2 cột khi màn hình nhỏ */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .product {
+                width: 100%; /* 1 cột khi màn hình rất nhỏ */
+            }
+        }
+
+        h2, h3 {
+            margin-bottom: 2rem; /* Tạo khoảng cách dưới giữa các tiêu đề */
+        }
+	/* Cập nhật cho tất cả các tiêu đề h2 */
+	h2 {
+    	font-size: 3rem;
+    	margin: 2rem 0;
+    	color: #28a745; /* Màu xanh lá cây cho tiêu đề */
+    	text-transform: uppercase; /* Viết hoa */
+    	text-align: center; /* Căn giữa */
+    	border-bottom: 2px solid #28a745; /* Đường gạch dưới tiêu đề */
+    	padding-bottom: 1rem;
+    	font-weight: bold; /* Làm cho chữ đậm */
+	}
+
+	/* Thêm hiệu ứng hover khi di chuột vào tiêu đề */
+	h2:hover {
+    	color: #e74c3c; /* Màu đỏ khi hover */
+    	border-bottom: 2px solid #e74c3c; /* Đổi màu gạch dưới khi hover */
+	}
+
+
+        h3 {
+            margin-top: 2rem; /* Khoảng cách trên giữa các tiêu đề */
+            margin-bottom: 1rem; /* Tạo khoảng cách dưới giữa tiêu đề "Sản Phẩm Từ Nho" và sản phẩm */
+            color: #28a745;
+            text-transform: uppercase;
+            border-bottom: 2px solid #28a745;
+            padding-bottom: 1rem;
+       	font-size: 1.5rem;
+        }
+
+        /* Tạo khoảng cách giữa "Sản Phẩm Từ Nho" và "Đặc Sản Đăk Lăk" */
+        .products + h2 {
+            margin-top: 4rem; /* Khoảng cách này có thể điều chỉnh theo nhu cầu */
+        }
+
+        footer {
+            background: #28a745;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Chuyên Cung Cấp Nông Sản / Đặc Sản Phan Rang - Đăk Lăk </h1>
+    </header>
+
+    <header>
+        <h1>Sản Phẩm Nông Sản Thúy Mai</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Trang Chủ</a></li>
+            <li><a href="products.html">Sản Phẩm</a></li>
+            <li><a href="contact.html">Liên Hệ</a></li>
+            <li><a href="about.html">Giới Thiệu</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h2>Đặc Sản Phan Rang</h2>
+
+        <h3>Nho Phan Rang</h3>
+        <div class="products">
+            <div class="product">
+                <img src="nho.png" alt="Nho Đỏ">
+                <h3>Nho Đỏ</h3>
+                <button>Mua Ngay</button>
+            </div>
+            <div class="product">
+                <img src="nho.png" alt="Nho Xanh">
+                <h3>Nho Xanh</h3>
+                <button>Mua Ngay</button>
+            </div>
+            <div class="product">
+                <img src="nho.png" alt="Nho Không Hạt">
+                <h3>Nho Không Hạt</h3>
+                <button>Mua Ngay</button>
+            </div>
+        </div>
+
+        <h3>Táo Phan Rang</h3>
+        <div class="products">
+            <div class="product">
+                <img src="tao.png" alt="Táo Loại 1">
+                <h3>Táo Loại 1</h3>
+                <button>Mua Ngay</button>
+            </div>
+            <div class="product">
+                <img src="tao.png" alt="Táo Loại 2">
+                <h3>Táo Loại 2</h3>
+                <button>Mua Ngay</button>
+            </div>
+            <div class="product">
+                <img src="tao.png" alt="Táo Loại 3">
+                <h3>Táo Loại 3</h3>
+                <button>Mua Ngay</button>
+            </div>
+        </div>
+
+        <h3>Ổi Phan Rang</h3>
+        <div class="products">
+            <div class="product">
+                <img src="oi.png" alt="Ổi Loại 1">
+                <h3>Ổi Loại 1</h3>
+                <button>Mua Ngay</button>
+            </div>
+            <div class="product">
+                <img src="oi.png" alt="Ổi Loại 2">
+                <h3>Ổi Loại 2</h3>
+                <button>Mua Ngay</button>
+            </div>
+            <div class="product">
+                <img src="oi.png" alt="Ổi Loại 3">
+                <h3>Ổi Loại 3</h3>
+                <button>Mua Ngay</button>
+            </div>
+        </div>
+
+        <h3>Sản Phẩm Từ Nho</h3>
+        <div class="products">
+            <div class="product">
+                <img src="ruounho.png" alt="Rượu Nho">
+                <h3>Rượu Nho</h3>
+                <button>Mua Ngay</button>
+            </div>
+            <div class="product">
+                <img src="matnho.png" alt="Mật Nho">
+                <h3>Mật Nho</h3>
+                <button>Mua Ngay</button>
+            </div>
+            <div class="product">
+                <img src="nhokho.png" alt="Nho Khô">
+                <h3>Nho Khô</h3>
+                <button>Mua Ngay</button>
+            </div>
+        </div>
+
+        <!-- Khoảng cách giữa "Sản Phẩm Từ Nho" và "Đặc Sản Đăk Lăk" -->
+        <h2>Đặc Sản Đăk Lăk</h2>
+
+        <h3>Cà Phê Đăk Lăk</h3>
+        <div class="products">
+            <div class="product">
+                <img src="caphetron.png" alt="Cà Phê Trộn">
+                <h3>Cà Phê Trộn</h3>
+                <button>Mua Ngay</button>
+            </div>
+            <div class="product">
+                <img src="caphenguyenchat.png" alt="Cà Phê Nguyên Chất">
+                <h3>Cà Phê Nguyên Chất</h3>
+                <button>Mua Ngay</button>
+            </div>
+            <div class="product">
+                <img src="caphe.png" alt="Cà Phê Hạt">
+                <h3>Cà Phê Hạt</h3>
+                <button>Mua Ngay</button>
+            </div>
+        </div>
+
+        <h3>Ca Cao</h3>
+        <div class="products">
+            <div class="product">
+                <img src="cacao.png" alt="Bột Ca Cao">
+                <h3>Bột Ca Cao</h3>
+                <button>Mua Ngay</button>
+            </div>
+            <div class="product">
+                <img src="cacaotrai.png" alt="Trái Ca Cao">
+                <h3>Trái Ca Cao</h3>
+                <button>Mua Ngay</button>
+            </div>
+        </div>
+
+        <h3>Hạt Điều Đăk Lăk</h3>
+        <div class="products">
+            <div class="product">
+                <img src="hatdieu.png" alt="Hạt Điều Loại 1">
+                <h3>Hạt Điều Loại 1</h3>
+                <button>Mua Ngay</button>
+            </div>
+            <div class="product">
+                <img src="hatdieu.png" alt="Hạt Điều Loại 2">
+                <h3>Hạt Điều Loại 2</h3>
+                <button>Mua Ngay</button>
+            </div>
+        </div>
+
+        <h3>Hạt Tiêu Đăk Lăk</h3>
+        <div class="products">
+            <div class="product">
+                <img src="hattieu.png" alt="Tiêu Loại 1">
+                <h3>Tiêu Loại 1</h3>
+                <button>Mua Ngay</button>
+            </div>
+            <div class="product">
+                <img src="hattieu.png" alt="Tiêu Loại 2">
+                <h3>Tiêu Loại 2</h3>
+                <button>Mua Ngay</button>
+            </div>
+            <div class="product">
+                <img src="hattieu.png" alt="Tiêu Loại 3">
+                <h3>Tiêu Loại 3</h3>
+                <button>Mua Ngay</button>
+            </div>
+        </div>
+
+        <h3>Hạt Mắc Ca</h3>
+        <div class="products">
+            <div class="product">
+                <img src="macca.png" alt="Hạt Mắc Ca Loại 1">
+                <h3>Mắc Ca Loại 1</h3>
+                <button>Mua Ngay</button>
+            </div>
+            <div class="product">
+                <img src="macca.png" alt="Hạt Mắc Ca Loại 2">
+                <h3>Mắc Ca Loại 2</h3>
+                <button>Mua Ngay</button>
+            </div>
+            <div class="product">
+                <img src="macca.png" alt="Hạt Mắc Ca Loại 3">
+                <h3>Mắc Ca Loại 3</h3>
+                <button>Mua Ngay</button>
+            </div>
+        </div>
+
+        <h3>Bơ Đăk Lăk</h3>
+        <div class="products">
+            <div class="product">
+                <img src="bosap.png" alt="Bơ Sáp">
+                <h3>Bơ Sáp</h3>
+                <button>Mua Ngay</button>
+            </div>
+            <div class="product">
+                <img src="bonuoc.png" alt="Bơ Nước">
+                <h3>Bơ Nước</h3>
+                <button>Mua Ngay</button>
+            </div>
+            <div class="product">
+                <img src="bobooth.png" alt="Bơ booth">
+                <h3>Bơ booth</h3>
+                <button>Mua Ngay</button>
+            </div>
+        </div>
+
+	<h3>Sầu Riêng Đăk Lăk</h3>
+        <div class="products">
+            <div class="product">
+                <img src="saudona.png" alt="Sầu Riêng Dona">
+                <h3>Sầu Riêng Dona</h3>
+                <button>Mua Ngay</button>
+            </div>
+            <div class="product">
+                <img src="sauri6.png" alt="Sầu Riêng Ri6">
+                <h3>Sầu Riêng Ri6</h3>
+                <button>Mua Ngay</button>
+            </div>
+            <div class="product">
+                <img src="sauockhi.png" alt="Sầu Riêng Óc Khỉ">
+                <h3>Sầu Riêng Óc Khỉ</h3>
+                <button>Mua Ngay</button>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Cửa Hàng Nông Sản. Mọi quyền được bảo lưu.</p>
+    </footer>
+</body>
+</html>
