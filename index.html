@@ -116,6 +116,45 @@
             padding: 1rem;
             margin-top: 2rem;
         }
+	h3 {
+    font-size: 1.8rem;
+    margin: 2rem 0 1rem 0; /* Khoảng cách trên và dưới tiêu đề nhóm */
+    color: #28a745;
+    text-transform: uppercase;
+    border-bottom: 2px solid #28a745;
+    padding-bottom: 0.5rem;
+}
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-between; /* Căn các sản phẩm đều trong hàng ngang */
+}
+
+.product {
+    background: white;
+    padding: 1rem;
+    border-radius: 5px;
+    width: calc(30% - 1rem); /* Chia thành 3 cột cân đối */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+/* Đảm bảo sản phẩm full width khi màn hình nhỏ */
+@media (max-width: 768px) {
+    .product {
+        width: calc(48% - 1rem); /* Chia thành 2 cột khi màn hình nhỏ */
+    }
+}
+
+@media (max-width: 480px) {
+    .product {
+        width: 100%; /* 1 cột khi màn hình rất nhỏ */
+    }
+}
+
     </style>
 </head>
 <body>
@@ -125,112 +164,199 @@
 
     <nav>
         <ul>
-            <li><a href="#">Trang Chủ</a></li>
-            <li><a href="#">Sản Phẩm</a></li>
-            <li><a href="#">Liên Hệ</a></li>
-            <li><a href="#">Giới Thiệu</a></li>
+            <li><a href="index.html">Trang Chủ</a></li>
+            <li><a href="products.html">Sản Phẩm</a></li>
+            <li><a href="about.html">Liên Hệ</a></li>
+            <li><a href="contact.html">Giới Thiệu</a></li>
         </ul>
     </nav>
 
     <div class="container">
         <h2>Sản Phẩm Nổi Bật</h2>
-        <div class="products">
-            <div class="product">
-                <img src="tao.png" alt="Táo Phan Rang">
-                <h2>Táo Phan Rang</h2>
-                <p>Sản phẩm tươi ngon, được thu hoạch từ nhà vườn.</p>
-                <div class="price">50.000 đ/kg</div>
-                <button>Mua Ngay</button>
-            </div>
+	<h3>Nho Phan Rang</h3>
+<div class="products">
+    <div class="product">
+        <img src="nho.png" alt="Nho Đỏ">
+        <h2>Nho Đỏ</h2>
+        <button>Mua Ngay</button>
+    </div>
+    <div class="product">
+        <img src="nho.png" alt="Nho Xanh">
+        <h2>Nho Xanh</h2>
+        <button>Mua Ngay</button>
+    </div>
+    <div class="product">
+        <img src="nho.png" alt="Nho Không Hạt">
+        <h2>Nho Không Hạt</h2>
+        <button>Mua Ngay</button>
+    </div>
+</div>
+	<h3>Táo Phan Rang</h3>
+<div class="products">
+    <div class="product">
+        <img src="tao.png" alt="Táo Loại 1">
+        <h2>Táo Loại 1</h2>
+        <button>Mua Ngay</button>
+    </div>
+    <div class="product">
+        <img src="tao.png" alt="Táo Loại 2">
+        <h2>Táo Loại 2</h2>
+        <button>Mua Ngay</button>
+    </div>
+    <div class="product">
+        <img src="tao.png" alt="Táo Loại 3">
+        <h2>Táo Loại 3</h2>
+        <button>Mua Ngay</button>
+    </div>
 
-            <div class="product">
-                <img src="oi.png" alt="Ổi Phan Rang">
-                <h2>Ổi Phan Rang</h2>
-                <p>Sản phẩm tươi ngon, được thu hoạch từ nhà vườn.</p>
-                <div class="price">50.000 đ/kg</div>
-                <button>Mua Ngay</button>
-            </div>
+</div>
+	<h3>Ổi Phan Rang</h3>
+<div class="products">
+    <div class="product">
+        <img src="oi.png" alt="Ổi Loại 1">
+        <h2>Ổi Loại 1</h2>
+        <button>Mua Ngay</button>
+    </div>
+    <div class="product">
+        <img src="oi.png" alt="Ổi Loại 2">
+        <h2>Ổi Loại 2</h2>
+        <button>Mua Ngay</button>
+    </div>
+    <div class="product">
+        <img src="oi.png" alt="Ổi Loại 3">
+        <h2>Ổi Loại 3</h2>
+        <button>Mua Ngay</button>
+    </div>
 
-            <div class="product">
-                <img src="nho.png" alt="Nho Phan Rang">
-                <h2>Nho Phan Rang</h2>
-                <p>Sản phẩm tươi ngon, được thu hoạch từ nhà vườn.</p>
-                <div class="price">500.000 đ/kg</div>
-                <button>Mua Ngay</button>
-            </div>
+</div>
+	<h3>Sản Phẩm Từ Nho</h3>
+<div class="products">
+    <div class="product">
+        <img src="ruounho.png" alt="Rượu Nho">
+        <h2>Rượu Nho</h2>
+        <button>Mua Ngay</button>
+    </div>
+    <div class="product">
+        <img src="matnho.png" alt="Mật Nho">
+        <h2>Mật Nho</h2>
+        <button>Mua Ngay</button>
+    </div>
+    <div class="product">
+        <img src="nhokho.png" alt="Nho Khô">
+        <h2>Nho Khô</h2>
+        <button>Mua Ngay</button>
+    </div>
 
-	    <div class="product">
-                <img src="caphe.png" alt="Cà Phê Trộn">
-                <h2>Cà Phê Trộn</h2>
-                <p>Sản phẩm tươi ngon, được thu hoạch từ nhà vườn.</p>
-                <div class="price">500.000 đ/kg</div>
-                <button>Mua Ngay</button>
-            </div>
+</div>
 
-	    <div class="product">
-                <img src="hattieu.png" alt="Tiêu hạt Đăk Lăk">
-                <h2>Tiêu hạt Đăk Lăk</h2>
-                <p>Sản phẩm tươi ngon, được thu hoạch từ nhà vườn.</p>
-                <div class="price">500.000 đ/kg</div>
-                <button>Mua Ngay</button>
-            </div>
 
-	    <div class="product">
-                <img src="macca.png" alt="Hạt Măc Ca">
-                <h2>Hạt Măc Ca</h2>
-                <p>Sản phẩm tươi ngon, được thu hoạch từ nhà vườn.</p>
-                <div class="price">500.000 đ/kg</div>
-                <button>Mua Ngay</button>
-            </div>
+        <h3>Cà Phê Đăk Lăk</h3>
+<div class="products">
+    <div class="product">
+        <img src="caphetron.png" alt="Cà Phê Trộn">
+        <h2>Cà Phê Trộn</h2>
+        <button>Mua Ngay</button>
+    </div>
+    <div class="product">
+        <img src="caphenguyenchat.png" alt="Cà Phê Nguyên Chất">
+        <h2>Cà Phê Nguyên Chất</h2>
+        <button>Mua Ngay</button>
+    </div>
+    <div class="product">
+        <img src="caphe.png" alt="Cà Phê Hạt">
+        <h2>Cà Phê Hạt</h2>
+        <button>Mua Ngay</button>
+    </div>
+</div>
 
-	    <div class="product">
-                <img src="hatdieu.png" alt="Hạt Điều Đăk Lăk">
-                <h2>Hạt Điều Đăk Lăk</h2>
-                <p>Sản phẩm tươi ngon, được thu hoạch từ nhà vườn.</p>
-                <div class="price">50.000 đ/kg</div>
-                <button>Mua Ngay</button>
-            </div>
+<h3>Ca Cao</h3>
+<div class="products">
+    <div class="product">
+        <img src="cacao.png" alt="Bột Ca Cao">
+        <h2>Bột Ca Cao</h2>
+        <button>Mua Ngay</button>
+    </div>
+    <div class="product">
+        <img src="cacaotrai.png" alt="Trái Ca Cao">
+        <h2>Trái Ca Cao</h2>
+        <button>Mua Ngay</button>
+    </div>
+</div>
 
-            <div class="product">
-                <img src="saurieng.png" alt="Sầu Riêng Đăk Lăk">
-                <h2>Sầu Riêng Đăk Lăk</h2>
-                <p>Sản phẩm tươi ngon, được thu hoạch từ nhà vườn.</p>
-                <div class="price">50.000 đ/kg</div>
-                <button>Mua Ngay</button>
-            </div>
+<h3>Hạt Điều Đăk Lăk</h3>
+<div class="products">
+    <div class="product">
+        <img src="hatdieu.png" alt="Hạt Điều Loại 1">
+        <h2>Hạt Điều Loại 1</h2>
+        <button>Mua Ngay</button>
+    </div>
+    <div class="product">
+        <img src="hatdieu.png" alt="Hạt Điều Loại 2">
+        <h2>Hạt Điều Loại 2</h2>
+        <button>Mua Ngay</button>
+    </div>
+</div>
 
-            <div class="product">
-                <img src="cacao.png" alt="Bột Ca Cao">
-                <h2>Bột Ca Cao</h2>
-                <p>Sản phẩm tươi ngon, được thu hoạch từ nhà vườn.</p>
-                <div class="price">500.000 đ/kg</div>
-                <button>Mua Ngay</button>
-            </div>
+<h3>Hạt Tiêu Đăk Lăk</h3>
+<div class="products">
+    <div class="product">
+        <img src="hattieu.png" alt="Tiêu Loại 1">
+        <h2>Tiêu Loại 1</h2>
+        <button>Mua Ngay</button>
+    </div>
+    <div class="product">
+        <img src="hattieu.png" alt="Tiêu Loại 2">
+        <h2>Tiêu Loại 2</h2>
+        <button>Mua Ngay</button>
+    </div>
+	<div class="product">
+        <img src="hattieu.png" alt="Tiêu Loại 3">
+        <h2>Tiêu Loại 3</h2>
+        <button>Mua Ngay</button>
+    </div>
 
-	    <div class="product">
-                <img src="ruounho.png" alt="Rượu Nho">
-                <h2>Rượu Nho</h2>
-                <p>Sản phẩm tươi ngon, được thu hoạch từ nhà vườn.</p>
-                <div class="price">500.000 đ/kg</div>
-                <button>Mua Ngay</button>
-            </div>
+</div>
 
-	    <div class="product">
-                <img src="ruounho.png" alt="Mật Nho">
-                <h2>Mật Nho</h2>
-                <p>Sản phẩm tươi ngon, được thu hoạch từ nhà vườn.</p>
-                <div class="price">500.000 đ/kg</div>
-                <button>Mua Ngay</button>
-            </div>
+<h3>Hạt Mắc Ca</h3>
+<div class="products">
+    <div class="product">
+        <img src="macca.png" alt="Hạt Mắc Ca Loại 1">
+        <h2>Mắc Ca Loại 1</h2>
+        <button>Mua Ngay</button>
+    </div>
+    <div class="product">
+        <img src="macca.png" alt="Hạt Mắc Ca Loại 2">
+        <h2>Mắc Ca Loại 2</h2>
+        <button>Mua Ngay</button>
+    </div>
+	<div class="product">
+        <img src="macca.png" alt="Hạt Mắc Ca Loại 3">
+        <h2>Mắc Ca Loại 3</h2>
+        <button>Mua Ngay</button>
+    </div>
 
-	    <div class="product">
-                <img src="bo.png" alt="Bơ Sáp">
-                <h2>Bơ Sáp</h2>
-                <p>Sản phẩm tươi ngon, được thu hoạch từ nhà vườn.</p>
-                <div class="price">500.000 đ/kg</div>
-                <button>Mua Ngay</button>
+</div>
 
-        </div>
+<h3>Bơ Đăk Lăk</h3>
+<div class="products">
+    <div class="product">
+        <img src="bosap.png" alt="Bơ Sáp">
+        <h2>Bơ Sáp</h2>
+        <button>Mua Ngay</button>
+    </div>
+    <div class="product">
+        <img src="bonuoc.png" alt="Bơ Nước">
+        <h2>Bơ Nước</h2>
+        <button>Mua Ngay</button>
+    </div>
+	<div class="product">
+        <img src="bobooth.png" alt="Bơ booth">
+        <h2>Bơ booth</h2>
+        <button>Mua Ngay</button>
+    </div>
+
+</div>
+
     </div>
 
     <footer>
