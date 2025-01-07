@@ -3,14 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nông Sản Thúy Mai</title>
+    <title>Nông Sản Thúy Mai - Đặc Sản Phan Rang, Đăk Lăk</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         * {
             box-sizing: border-box;
-            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
         }
@@ -47,22 +46,24 @@
         nav ul li a:hover {
             text-decoration: underline;
         }
-
+	
         .container {
-            width: 80%;
-            margin: 2rem auto;
-        }
+    	    width: 90%;  /* Điều chỉnh chiều rộng để tối ưu trên các thiết bị di động */
+    	    padding: 1rem; /* Thêm padding để sản phẩm không bị dính vào mép */
+    	    margin: 2rem auto;
+	}
+
 
         .products {
             display: flex;
             flex-wrap: wrap;
-            gap: 2rem;
+            gap: 1.5rem;
             justify-content: space-between; /* Căn các sản phẩm đều trong hàng ngang */
         }
 
         .product {
             background: white;
-            padding: 1rem;
+            padding: 1.5rem;
             border-radius: 5px;
             width: calc(30% - 1rem); /* Chia thành 3 cột cân đối */
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -74,6 +75,11 @@
             color: #e74c3c;
             font-weight: bold;
             margin: 1rem 0;
+        }
+	.product .description {
+           font-size: 1rem;
+           color: #555;
+           margin: 1rem 0;
         }
 
         .product button {
@@ -95,18 +101,15 @@
         }
 
         footer {
-            background: #28a745;
+            background: #2d7a3d; /* Màu xanh lá cây đậm cho footer */
             color: white;
+            padding: 1rem 0;
             text-align: center;
-            padding: 1rem;
-            margin-top: 2rem;
         }
-
-
         /* Đảm bảo sản phẩm full width khi màn hình nhỏ */
         @media (max-width: 768px) {
             .product {
-                width: calc(48% - 1rem); /* Chia thành 2 cột khi màn hình nhỏ */
+                width: calc(50% - 1rem); /* Chia thành 2 cột khi màn hình nhỏ */
             }
         }
 
@@ -115,9 +118,8 @@
                 width: 100%; /* 1 cột khi màn hình rất nhỏ */
             }
         }
-
         h2, h3 {
-            margin-bottom: 2rem; /* Tạo khoảng cách dưới giữa các tiêu đề */
+            margin-bottom: 1rem; /* Tạo khoảng cách dưới giữa các tiêu đề */
         }
 	/* Cập nhật cho tất cả các tiêu đề h2 */
 	h2 {
@@ -130,16 +132,13 @@
     	padding-bottom: 1rem;
     	font-weight: bold; /* Làm cho chữ đậm */
 	}
-
 	/* Thêm hiệu ứng hover khi di chuột vào tiêu đề */
 	h2:hover {
     	color: #e74c3c; /* Màu đỏ khi hover */
     	border-bottom: 2px solid #e74c3c; /* Đổi màu gạch dưới khi hover */
 	}
-
-
         h3 {
-            margin-top: 2rem; /* Khoảng cách trên giữa các tiêu đề */
+            margin-top: 1rem; /* Khoảng cách trên giữa các tiêu đề */
             margin-bottom: 1rem; /* Tạo khoảng cách dưới giữa tiêu đề "Sản Phẩm Từ Nho" và sản phẩm */
             color: #28a745;
             text-transform: uppercase;
@@ -147,248 +146,509 @@
             padding-bottom: 1rem;
        	font-size: 1.5rem;
         }
-
+	h2 {
+    	margin-top: 1rem;  /* Tạo khoảng cách lớn phía trên mỗi tiêu đề */
+    	margin-bottom: 2rem;  /* Khoảng cách phía dưới tiêu đề */
+	}
+	h3 {
+    	margin-top: 1rem;  /* Khoảng cách phía trên các tiêu đề h3 */
+    	margin-bottom: 1.5rem;  /* Khoảng cách phía dưới các tiêu đề h3 */
+	}
         /* Tạo khoảng cách giữa "Sản Phẩm Từ Nho" và "Đặc Sản Đăk Lăk" */
         .products + h2 {
             margin-top: 4rem; /* Khoảng cách này có thể điều chỉnh theo nhu cầu */
         }
 
         footer {
-            background: #28a745;
+            background: #218838;
             color: white;
             text-align: center;
             padding: 1rem;
             margin-top: 2rem;
         }
+	footer ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
 
+        footer ul li {
+            margin: 0 1rem;
+        }
+
+        footer ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-links {
+            font-size: 0.9rem;
+            margin-top: 2rem;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            display: inline-block;
+        }
+
+        .footer-links a:hover {
+            background-color: #2c6f30;
+        }
+
+        .footer-info {
+            margin-top: 2rem;
+            font-size: 0.8rem;
+            text-align: center;
+            color: white;
+        }
+	button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    color: white;
+}
+.add-to-cart-btn {
+    background-color: #f0ad4e;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #ec971f;
+}
+form {
+  display: flex;               /* Sử dụng Flexbox để sắp xếp nút theo hàng ngang */
+  justify-content: center; /* Căn các nút về giữa */
+}
+form button {
+  margin-right: 20px;          /* Tạo khoảng cách 10px giữa các nút */
+}
+form button:last-child {
+  margin-right: 0;             /* Xóa khoảng cách bên phải của nút cuối cùng */
+}
+.buy-now-btn, .add-to-cart-btn {
+  padding: 10px 20px;          /* Tăng kích thước nút để dễ nhìn và nhấn */
+  font-size: 16px;             /* Điều chỉnh kích thước chữ */
+}
+.buy-now-btn {
+    background-color: #d9534f;
+}
+.buy-now-btn:hover {
+    background-color: #c9302c;
+}
     </style>
 </head>
+<script>
+// Hàm thêm sản phẩm vào giỏ hàng
+function addToCart(product) {
+    // Lấy dữ liệu giỏ hàng từ localStorage
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    
+    // Kiểm tra xem sản phẩm đã tồn tại trong giỏ hàng chưa
+    const existingProduct = cart.find(item => item.id === product.id);
+    if (existingProduct) {
+        existingProduct.quantity += 1; // Tăng số lượng nếu đã tồn tại
+    } else {
+        cart.push({ ...product, quantity: 1 }); // Thêm sản phẩm mới
+    }
+
+    // Lưu lại giỏ hàng vào localStorage
+    localStorage.setItem('cart', JSON.stringify(cart));
+    alert(`${product.name} đã được thêm vào giỏ hàng!`);
+}
+
+// Gắn sự kiện click cho tất cả các nút "Thêm Vào Giỏ"
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.add-to-cart-btn').forEach(button => {
+        button.addEventListener('click', function () {
+            // Lấy thông tin sản phẩm từ thuộc tính data-*
+            const product = {
+                id: button.getAttribute('data-id'),
+                name: button.getAttribute('data-name'),
+                price: button.getAttribute('data-price'),
+                quantity: 1
+            };
+
+            // Gọi hàm thêm sản phẩm vào giỏ hàng
+            addToCart(product);
+        });
+    });
+});
+</script>
+
 <body>
     <header>
-        <h1>Chuyên Cung Cấp Nông Sản / Đặc Sản Phan Rang - Đăk Lăk </h1>
+        <h1>Nông Sản Thúy Mai - Đặc Sản Phan Rang, Đăk Lăk</h1>
     </header>
-
-    <header>
-        <h1>Sản Phẩm Nông Sản Thúy Mai</h1>
-    </header>
-
     <nav>
         <ul>
             <li><a href="index.html">Trang Chủ</a></li>
             <li><a href="products.html">Sản Phẩm</a></li>
             <li><a href="contact.html">Liên Hệ</a></li>
             <li><a href="about.html">Giới Thiệu</a></li>
+	    <li><a href="blog.html">Blog</a></li>
         </ul>
-    </nav>
+	<a href="cart.html" style="
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #ff9800;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;">
+    Giỏ Hàng
+	</a>
 
+    </nav>
     <div class="container">
         <h2>Đặc Sản Phan Rang</h2>
-
         <h3>Nho Phan Rang</h3>
         <div class="products">
             <div class="product">
-                <img src="nho.png" alt="Nho Đỏ">
-                <h3>Nho Đỏ</h3>
-                <button>Mua Ngay</button>
-            </div>
-            <div class="product">
+    		<img src="nho.png" alt="Nho Đỏ">
+    		<h3>Nho Đỏ</h3>
+		<p class="description">Nho đỏ tươi ngon, giàu vitamin C, tốt cho sức khỏe, phù hợp mọi lứa tuổi.</p>
+    		<p class="price">100.000 VNĐ/kg</p>
+		<form action="thanhtoan.html" style=" gap: 10px;">
+        	<button type="submit" class="buy-now-btn">Mua Ngay</button>
+        	<button type="button" class="add-to-cart-btn" data-id="1" data-name="Nho Đỏ" data-price="100000">
+        	Thêm Vào Giỏ
+    		</button>
+    		</form>
+	</div>          
+		<div class="product">
                 <img src="nho.png" alt="Nho Xanh">
                 <h3>Nho Xanh</h3>
-                <button>Mua Ngay</button>
+		<p class="description">Nho xanh vị ngọt thanh, giàu chất chống oxy hóa và tốt cho hệ miễn dịch.</p>
+    		<p class="price">100.000 VNĐ/kg</p>
+    		<form action="thanhtoan.html" style=" gap: 10px;">
+        	<button type="submit" class="buy-now-btn">Mua Ngay</button>
+        	<button type="button" class="add-to-cart-btn" data-id="1" data-name="Nho Xanh" data-price="100000">
+        	Thêm Vào Giỏ
+    		</button>
+    		</form>
             </div>
             <div class="product">
                 <img src="nho.png" alt="Nho Không Hạt">
                 <h3>Nho Không Hạt</h3>
-                <button>Mua Ngay</button>
+		<p class="description">Nho không hạt dễ ăn, chứa nhiều vitamin và khoáng chất, giúp làm đẹp da và cải thiện sức khỏe.</p>
+    		<p class="price">100.000 VNĐ/kg</p>
+    		<form action="thanhtoan.html" style=" gap: 10px;">
+        	<button type="submit" class="buy-now-btn">Mua Ngay</button>
+        	<button type="button" class="add-to-cart-btn">Thêm Vào Giỏ</button>
+    		</form>
             </div>
         </div>
-
         <h3>Táo Phan Rang</h3>
         <div class="products">
             <div class="product">
                 <img src="tao.png" alt="Táo Loại 1">
                 <h3>Táo Loại 1</h3>
-                <button>Mua Ngay</button>
+		<p class="price">100.000 VNĐ/kg</p>
+    		<form action="thanhtoan.html" style=" gap: 10px;">
+        	<button type="submit" class="buy-now-btn">Mua Ngay</button>
+        	<button type="button" class="add-to-cart-btn">Thêm Vào Giỏ</button>
+    		</form>
             </div>
             <div class="product">
                 <img src="tao.png" alt="Táo Loại 2">
                 <h3>Táo Loại 2</h3>
-                <button>Mua Ngay</button>
+		<p class="price">100.000 VNĐ/kg</p>
+    		<form action="thanhtoan.html" style=" gap: 10px;">
+        	<button type="submit" class="buy-now-btn">Mua Ngay</button>
+        	<button type="button" class="add-to-cart-btn">Thêm Vào Giỏ</button>
+    		</form>
             </div>
             <div class="product">
                 <img src="tao.png" alt="Táo Loại 3">
                 <h3>Táo Loại 3</h3>
-                <button>Mua Ngay</button>
+		<p class="price">100.000 VNĐ/kg</p>
+    		<form action="thanhtoan.html" style=" gap: 10px;">
+        	<button type="submit" class="buy-now-btn">Mua Ngay</button>
+        	<button type="button" class="add-to-cart-btn">Thêm Vào Giỏ</button>
+    		</form>
             </div>
         </div>
-
         <h3>Ổi Phan Rang</h3>
         <div class="products">
             <div class="product">
                 <img src="oi.png" alt="Ổi Loại 1">
                 <h3>Ổi Loại 1</h3>
-                <button>Mua Ngay</button>
+		<p class="price">100.000 VNĐ/kg</p>
+    		<form action="thanhtoan.html" style=" gap: 10px;">
+        	<button type="submit" class="buy-now-btn">Mua Ngay</button>
+        	<button type="button" class="add-to-cart-btn">Thêm Vào Giỏ</button>
+    		</form>
             </div>
             <div class="product">
                 <img src="oi.png" alt="Ổi Loại 2">
                 <h3>Ổi Loại 2</h3>
-                <button>Mua Ngay</button>
+		<p class="price">100.000 VNĐ/kg</p>
+    		<form action="thanhtoan.html" style=" gap: 10px;">
+        	<button type="submit" class="buy-now-btn">Mua Ngay</button>
+        	<button type="button" class="add-to-cart-btn">Thêm Vào Giỏ</button>
+    		</form>
             </div>
             <div class="product">
                 <img src="oi.png" alt="Ổi Loại 3">
                 <h3>Ổi Loại 3</h3>
-                <button>Mua Ngay</button>
+		<p class="price">100.000 VNĐ/kg</p>
+    		<form action="thanhtoan.html" style=" gap: 10px;">
+        	<button type="submit" class="buy-now-btn">Mua Ngay</button>
+        	<button type="button" class="add-to-cart-btn">Thêm Vào Giỏ</button>
+    		</form>
             </div>
         </div>
-
         <h3>Sản Phẩm Từ Nho</h3>
         <div class="products">
             <div class="product">
                 <img src="ruounho.png" alt="Rượu Nho">
                 <h3>Rượu Nho</h3>
-                <button>Mua Ngay</button>
+		<p class="description">Rượu nho thơm ngon, đậm vị, được ủ từ những trái nho tươi chọn lọc, mang lại sự tinh tế và lợi ích tốt cho tim mạch khi dùng đúng cách.</p>
+    		<p class="price">100.000 VNĐ/kg</p>
+    		<form action="thanhtoan.html" style=" gap: 10px;">
+        	<button type="submit" class="buy-now-btn">Mua Ngay</button>
+        	<button type="button" class="add-to-cart-btn">Thêm Vào Giỏ</button>
+    		</form>
             </div>
             <div class="product">
                 <img src="matnho.png" alt="Mật Nho">
                 <h3>Mật Nho</h3>
-                <button>Mua Ngay</button>
+		<p class="description">Mật nho nguyên chất, giàu dinh dưỡng, vị ngọt tự nhiên, thích hợp làm thức uống giải khát hoặc kết hợp với các món ăn bổ dưỡng.</p>
+    		<p class="price">100.000 VNĐ/kg</p>
+    		<form action="thanhtoan.html" style=" gap: 10px;">
+        	<button type="submit" class="buy-now-btn">Mua Ngay</button>
+        	<button type="button" class="add-to-cart-btn">Thêm Vào Giỏ</button>
+    		</form>
             </div>
             <div class="product">
                 <img src="nhokho.png" alt="Nho Khô">
                 <h3>Nho Khô</h3>
-                <button>Mua Ngay</button>
+		<p class="description">Nho khô dẻo ngon, giữ nguyên vị ngọt tự nhiên của nho tươi, cung cấp năng lượng nhanh và là món ăn vặt lành mạnh cho cả gia đình.</p>
+    		<p class="price">100.000 VNĐ/kg</p>
+    		<form action="thanhtoan.html" style=" gap: 10px;">
+        	<button type="submit" class="buy-now-btn">Mua Ngay</button>
+        	<button type="button" class="add-to-cart-btn">Thêm Vào Giỏ</button>
+    		</form>
             </div>
         </div>
-
         <!-- Khoảng cách giữa "Sản Phẩm Từ Nho" và "Đặc Sản Đăk Lăk" -->
         <h2>Đặc Sản Đăk Lăk</h2>
-
         <h3>Cà Phê Đăk Lăk</h3>
         <div class="products">
             <div class="product">
                 <img src="caphetron.png" alt="Cà Phê Trộn">
                 <h3>Cà Phê Trộn</h3>
-                <button>Mua Ngay</button>
+		<p class="price">100.000 VNĐ/kg</p>
+    		<form action="thanhtoan.html" style=" gap: 10px;">
+        	<button type="submit" class="buy-now-btn">Mua Ngay</button>
+        	<button type="button" class="add-to-cart-btn">Thêm Vào Giỏ</button>
+    		</form>
             </div>
             <div class="product">
                 <img src="caphenguyenchat.png" alt="Cà Phê Nguyên Chất">
                 <h3>Cà Phê Nguyên Chất</h3>
-                <button>Mua Ngay</button>
+		<p class="price">100.000 VNĐ/kg</p>
+    		<form action="thanhtoan.html" style=" gap: 10px;">
+        	<button type="submit" class="buy-now-btn">Mua Ngay</button>
+        	<button type="button" class="add-to-cart-btn">Thêm Vào Giỏ</button>
+    		</form>
             </div>
             <div class="product">
                 <img src="caphe.png" alt="Cà Phê Hạt">
                 <h3>Cà Phê Hạt</h3>
-                <button>Mua Ngay</button>
+		<p class="price">100.000 VNĐ/kg</p>
+    		<form action="thanhtoan.html" style=" gap: 10px;">
+        	<button type="submit" class="buy-now-btn">Mua Ngay</button>
+        	<button type="button" class="add-to-cart-btn">Thêm Vào Giỏ</button>
+    		</form>
             </div>
         </div>
-
         <h3>Ca Cao</h3>
         <div class="products">
             <div class="product">
                 <img src="cacao.png" alt="Bột Ca Cao">
                 <h3>Bột Ca Cao</h3>
-                <button>Mua Ngay</button>
+		<p class="price">100.000 VNĐ/kg</p>
+    		<form action="thanhtoan.html" style=" gap: 10px;">
+        	<button type="submit" class="buy-now-btn">Mua Ngay</button>
+        	<button type="button" class="add-to-cart-btn">Thêm Vào Giỏ</button>
+    		</form>
             </div>
             <div class="product">
                 <img src="cacaotrai.png" alt="Trái Ca Cao">
                 <h3>Trái Ca Cao</h3>
-                <button>Mua Ngay</button>
+		<p class="price">100.000 VNĐ/kg</p>
+    		<form action="thanhtoan.html" style=" gap: 10px;">
+        	<button type="submit" class="buy-now-btn">Mua Ngay</button>
+        	<button type="button" class="add-to-cart-btn">Thêm Vào Giỏ</button>
+    		</form>
             </div>
         </div>
-
         <h3>Hạt Điều Đăk Lăk</h3>
         <div class="products">
             <div class="product">
                 <img src="hatdieu.png" alt="Hạt Điều Loại 1">
                 <h3>Hạt Điều Loại 1</h3>
-                <button>Mua Ngay</button>
+		<p class="price">100.000 VNĐ/kg</p>
+    		<form action="thanhtoan.html" style=" gap: 10px;">
+        	<button type="submit" class="buy-now-btn">Mua Ngay</button>
+        	<button type="button" class="add-to-cart-btn">Thêm Vào Giỏ</button>
+    		</form>
             </div>
             <div class="product">
                 <img src="hatdieu.png" alt="Hạt Điều Loại 2">
                 <h3>Hạt Điều Loại 2</h3>
-                <button>Mua Ngay</button>
+		<p class="price">100.000 VNĐ/kg</p>
+    		<form action="thanhtoan.html" style=" gap: 10px;">
+        	<button type="submit" class="buy-now-btn">Mua Ngay</button>
+        	<button type="button" class="add-to-cart-btn">Thêm Vào Giỏ</button>
+    		</form>
             </div>
         </div>
-
         <h3>Hạt Tiêu Đăk Lăk</h3>
         <div class="products">
             <div class="product">
                 <img src="hattieu.png" alt="Tiêu Loại 1">
                 <h3>Tiêu Loại 1</h3>
-                <button>Mua Ngay</button>
+		<p class="price">100.000 VNĐ/kg</p>
+    		<form action="thanhtoan.html" style=" gap: 10px;">
+        	<button type="submit" class="buy-now-btn">Mua Ngay</button>
+        	<button type="button" class="add-to-cart-btn">Thêm Vào Giỏ</button>
+    		</form>
             </div>
             <div class="product">
                 <img src="hattieu.png" alt="Tiêu Loại 2">
                 <h3>Tiêu Loại 2</h3>
-                <button>Mua Ngay</button>
+		<p class="price">100.000 VNĐ/kg</p>
+    		<form action="thanhtoan.html" style=" gap: 10px;">
+        	<button type="submit" class="buy-now-btn">Mua Ngay</button>
+        	<button type="button" class="add-to-cart-btn">Thêm Vào Giỏ</button>
+    		</form>
             </div>
             <div class="product">
                 <img src="hattieu.png" alt="Tiêu Loại 3">
                 <h3>Tiêu Loại 3</h3>
-                <button>Mua Ngay</button>
+		<p class="price">100.000 VNĐ/kg</p>
+    		<form action="thanhtoan.html" style=" gap: 10px;">
+        	<button type="submit" class="buy-now-btn">Mua Ngay</button>
+        	<button type="button" class="add-to-cart-btn">Thêm Vào Giỏ</button>
+    		</form>
             </div>
         </div>
-
         <h3>Hạt Mắc Ca</h3>
         <div class="products">
             <div class="product">
                 <img src="macca.png" alt="Hạt Mắc Ca Loại 1">
                 <h3>Mắc Ca Loại 1</h3>
-                <button>Mua Ngay</button>
+		<p class="price">100.000 VNĐ/kg</p>
+    		<form action="thanhtoan.html" style=" gap: 10px;">
+        	<button type="submit" class="buy-now-btn">Mua Ngay</button>
+        	<button type="button" class="add-to-cart-btn">Thêm Vào Giỏ</button>
+    		</form>
             </div>
             <div class="product">
                 <img src="macca.png" alt="Hạt Mắc Ca Loại 2">
                 <h3>Mắc Ca Loại 2</h3>
-                <button>Mua Ngay</button>
+		<p class="price">100.000 VNĐ/kg</p>
+    		<form action="thanhtoan.html" style=" gap: 10px;">
+        	<button type="submit" class="buy-now-btn">Mua Ngay</button>
+        	<button type="button" class="add-to-cart-btn">Thêm Vào Giỏ</button>
+    		</form>
             </div>
             <div class="product">
                 <img src="macca.png" alt="Hạt Mắc Ca Loại 3">
                 <h3>Mắc Ca Loại 3</h3>
-                <button>Mua Ngay</button>
+		<p class="price">100.000 VNĐ/kg</p>
+    		<form action="thanhtoan.html" style=" gap: 10px;">
+        	<button type="submit" class="buy-now-btn">Mua Ngay</button>
+        	<button type="button" class="add-to-cart-btn">Thêm Vào Giỏ</button>
+    		</form>
             </div>
         </div>
-
         <h3>Bơ Đăk Lăk</h3>
         <div class="products">
             <div class="product">
                 <img src="bosap.png" alt="Bơ Sáp">
                 <h3>Bơ Sáp</h3>
-                <button>Mua Ngay</button>
+		<p class="price">100.000 VNĐ/kg</p>
+    		<form action="thanhtoan.html" style=" gap: 10px;">
+        	<button type="submit" class="buy-now-btn">Mua Ngay</button>
+        	<button type="button" class="add-to-cart-btn">Thêm Vào Giỏ</button>
+    		</form>
             </div>
             <div class="product">
                 <img src="bonuoc.png" alt="Bơ Nước">
                 <h3>Bơ Nước</h3>
-                <button>Mua Ngay</button>
+		<p class="price">100.000 VNĐ/kg</p>
+    		<form action="thanhtoan.html" style=" gap: 10px;">
+        	<button type="submit" class="buy-now-btn">Mua Ngay</button>
+        	<button type="button" class="add-to-cart-btn">Thêm Vào Giỏ</button>
+    		</form>
             </div>
             <div class="product">
                 <img src="bobooth.png" alt="Bơ booth">
                 <h3>Bơ booth</h3>
-                <button>Mua Ngay</button>
+		<p class="price">100.000 VNĐ/kg</p>
+    		<form action="thanhtoan.html" style=" gap: 10px;">
+        	<button type="submit" class="buy-now-btn">Mua Ngay</button>
+        	<button type="button" class="add-to-cart-btn">Thêm Vào Giỏ</button>
+    		</form>
             </div>
         </div>
-
 	<h3>Sầu Riêng Đăk Lăk</h3>
         <div class="products">
             <div class="product">
                 <img src="saudona.png" alt="Sầu Riêng Dona">
                 <h3>Sầu Riêng Dona</h3>
-                <button>Mua Ngay</button>
+		<p class="price">100.000 VNĐ/kg</p>
+    		<form action="thanhtoan.html" style=" gap: 10px;">
+        	<button type="submit" class="buy-now-btn">Mua Ngay</button>
+        	<button type="button" class="add-to-cart-btn">Thêm Vào Giỏ</button>
+    		</form>
             </div>
             <div class="product">
                 <img src="sauri6.png" alt="Sầu Riêng Ri6">
                 <h3>Sầu Riêng Ri6</h3>
-                <button>Mua Ngay</button>
+		<p class="price">100.000 VNĐ/kg</p>
+    		<form action="thanhtoan.html" style=" gap: 10px;">
+        	<button type="submit" class="buy-now-btn">Mua Ngay</button>
+        	<button type="button" class="add-to-cart-btn">Thêm Vào Giỏ</button>
+    		</form>
             </div>
             <div class="product">
                 <img src="sauockhi.png" alt="Sầu Riêng Óc Khỉ">
                 <h3>Sầu Riêng Óc Khỉ</h3>
-                <button>Mua Ngay</button>
+		<p class="price">100.000 VNĐ/kg</p>
+    		<form action="thanhtoan.html" style=" gap: 10px;">
+        	<button type="submit" class="buy-now-btn">Mua Ngay</button>
+        	<button type="button" class="add-to-cart-btn">Thêm Vào Giỏ</button>
+    		</form>
             </div>
         </div>
-
     </div>
-
+        <!-- Thanh điều hướng ở cuối trang -->
     <footer>
+        <nav>
+            <ul>
+                <li><a href="buying-guide.html">Hướng Dẫn Mua Hàng</a></li>
+                <li><a href="payment-guide.html">Hướng Dẫn Thanh Toán</a></li>
+                <li><a href="terms.html">Điều Khoản Dịch Vụ</a></li>
+                <li><a href="privacy-policy.html">Chính Sách Quyền Riêng Tư</a></li>
+                <li><a href="payment-policy.html">Chính Sách Thanh Toán</a></li>
+                <li><a href="return-policy.html">Chính Sách Hoàn Trả</a></li>
+            </ul>
+        </nav>
         <p>&copy; 2024 Cửa Hàng Nông Sản. Mọi quyền được bảo lưu.</p>
     </footer>
 </body>
