@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Nông Sản Thúy Mai</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background: #28a745;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            background: #218838;
+        }
+
+        nav ul li {
+            padding: 1rem;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            width: 90%;
+            margin: 2rem auto;
+            padding: 1rem;
+        }
+
+        .blog-posts {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            justify-content: space-between;
+        }
+
+        .blog-post {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 5px;
+            width: calc(30% - 1rem);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .blog-post img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .blog-post h3 {
+            margin: 1rem 0;
+            color: #28a745;
+        }
+
+        .blog-post p {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 1rem;
+        }
+
+        .blog-post button {
+            background-color: #28a745;
+            color: white;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .blog-post button:hover {
+            background-color: #218838;
+        }
+
+        .blog-post:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            background: #2d7a3d;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .blog-post {
+                width: calc(50% - 1rem);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .blog-post {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Blog - Nông Sản Thúy Mai</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Trang Chủ</a></li>
+            <li><a href="products.html">Sản Phẩm</a></li>
+            <li><a href="contact.html">Liên Hệ</a></li>
+            <li><a href="about.html">Giới Thiệu</a></li>
+            <li><a href="blog.html">Blog</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="blog-posts">
+            <div class="blog-post">
+                <img src="blogcacao.png" alt="Bài viết 1">
+                <h3>Tác Dụng Cacao Đối Với Sức Khỏe</h3>
+                <p>Tác dụng của cacao đối với sức khỏe là gì? Uống nhiều có tốt không? Sử dụng cacao thế nào để tốt cho sức khỏe?</p>
+                <button onclick="location.href='tacdungcacao.html'">Xem Chi Tiết</button>
+            </div>
+            <div class="blog-post">
+                <img src="blogri6.png" alt="Bài viết 2">
+                <h3>Bí Quyết Chọn Sầu Riêng Ri6 Chín Tự Nhiên và Thơm Ngon</h3>
+                <p>Nguồn gốc, bí quyết để chọn sầu riêng Ri6 sao cho thơm ngon?</p>
+                <button onclick="location.href='biquyetchonsauRi6.html'">Xem Chi Tiết</button>
+            </div>
+            <div class="blog-post">
+                <img src="blogcaphe.png" alt="Bài viết 3">
+                <h3>Lợi Ích Và Tác Hại Của Cà Phê?</h3>
+                <p>Cà phê mang lại nhiều lợi ích sức khỏe nhưng nếu tiêu thụ quá mức có thể để lại những tác hại tiêu cực.</p>
+                <button onclick="location.href='loiichtachaicaphe.html'">Xem Chi Tiết</button>
+            </div>
+	    <div class="blog-post">
+                <img src="blogruounho.png" alt="Bài viết 1">
+                <h3>Rượu nho có tác dụng gì? Lợi ích khi uống rượu nho đúng cách</h3>
+                <p>Rượu nho có lợi hay có hại đối với sức khỏe? Sử dụng rượu nho thế nào để có tác dụng tốt nhất? </p>
+                <button onclick="location.href='loiichruounho.html'">Xem Chi Tiết</button>
+            </div>
+            <div class="blog-post">
+                <img src="post2.jpg" alt="Bài viết 2">
+                <h3>Lợi Ích Sức Khỏe Từ Táo</h3>
+                <p>Táo không chỉ ngon mà còn cung cấp nhiều vitamin và khoáng chất tốt cho sức khỏe.</p>
+                <button onclick="location.href='post2.html'">Xem Chi Tiết</button>
+            </div>
+            <div class="blog-post">
+                <img src="post3.jpg" alt="Bài viết 3">
+                <h3>Mật Ong Và Những Điều Cần Biết</h3>
+                <p>Mật ong tự nhiên là một siêu thực phẩm, giúp tăng cường sức khỏe và làm đẹp da.</p>
+                <button onclick="location.href='post3.html'">Xem Chi Tiết</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 Nông Sản Thúy Mai - Đặc Sản Việt Nam</p>
+    </footer>
+</body>
+</html>
