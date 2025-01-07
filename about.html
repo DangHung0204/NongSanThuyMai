@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Giới Thiệu - Nông Sản Thúy Mai</title>
+    <meta name="description" content="Nông Sản Thúy Mai chuyên cung cấp các sản phẩm nông sản đặc sản từ Đăk Lăk và Ninh Thuận, cam kết chất lượng tươi ngon.">
+    <meta name="keywords" content="nông sản, đặc sản, Đăk Lăk, Ninh Thuận, cà phê, hạt tiêu, nho, táo, ổi, sầu riêng">
     <link rel="stylesheet" href="styles.css">
     <style>
         * {
             box-sizing: border-box;
-            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
         }
@@ -55,6 +56,11 @@
             padding: 2rem;
             border-radius: 10px;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .container:hover {
+            transform: scale(1.02);
         }
 
         .container h2, .container h3 {
@@ -88,15 +94,79 @@
         }
 
         footer {
-            background: #28a745;
+            background: #218838;
             color: white;
             text-align: center;
             padding: 1rem;
             margin-top: 2rem;
         }
+	footer nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 1rem;
+        padding: 0;
+    }
 
+    footer nav ul li {
+        padding: 0 1rem;
+    }
+
+    footer nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    footer nav ul li a:hover {
+        text-decoration: underline;
+    }
         strong {
             color: #218838;
+        }
+
+        .cta-button {
+            background-color: #218838;
+            color: white;
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 2rem;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .cta-button:hover {
+            background-color: #28a745;
+        }
+
+        .image-container {
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .image-container img {
+            width: 20%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                width: 100%;
+                padding: 1rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+            }
+
+            .cta-button {
+                width: 100%;
+                padding: 1rem;
+                text-align: center;
+            }
         }
     </style>
 </head>
@@ -111,6 +181,7 @@
             <li><a href="products.html">Sản Phẩm</a></li>
             <li><a href="contact.html">Liên Hệ</a></li>
             <li><a href="about.html">Giới Thiệu</a></li>
+            <li><a href="blog.html">Blog</a></li>
         </ul>
     </nav>
 
@@ -149,10 +220,44 @@
         </ul>
 
         <p>📞 <strong>Liên hệ ngay</strong> để đặt hàng và trải nghiệm hương vị nông sản đặc trưng từ chúng tôi!</p>
+
+        <div class="cta-button">
+            <a href="contact.html">Liên Hệ Ngay</a>
+        </div>
+
+        <div class="image-container">
+            <img src="caphe.png" alt="Đăk Lăk">
+            <img src="bosap.png" alt="Ninh Thuận">
+	    <img src="sauockhi.png" alt="Ninh Thuận">
+	    <img src="hatdieu.png" alt="Đăk Lăk">
+            <img src="hattieu.png" alt="Ninh Thuận">
+	    <img src="macca.png" alt="Đăk Lăk">
+            <img src="cacao.png" alt="Ninh Thuận">
+	    <img src="nho.png" alt="Đăk Lăk">
+            <img src="tao.png" alt="Ninh Thuận">
+	    <img src="oi.png" alt="Ninh Thuận">
+	    <img src="ruounho.png" alt="Ninh Thuận">
+	    <img src="nhokho.png" alt="Ninh Thuận">
+        </div>
     </div>
 
+        <!-- Thanh điều hướng ở cuối trang -->
     <footer>
+        <nav>
+            <ul>
+                <li><a href="buying-guide.html">Hướng Dẫn Mua Hàng</a></li>
+                <li><a href="payment-guide.html">Hướng Dẫn Thanh Toán</a></li>
+                <li><a href="terms.html">Điều Khoản Dịch Vụ</a></li>
+                <li><a href="privacy-policy.html">Chính Sách Quyền Riêng Tư</a></li>
+                <li><a href="payment-policy.html">Chính Sách Thanh Toán</a></li>
+                <li><a href="return-policy.html">Chính Sách Hoàn Trả</a></li>
+            </ul>
+        </nav>
+
         <p>&copy; 2024 Cửa Hàng Nông Sản. Mọi quyền được bảo lưu.</p>
     </footer>
+
+
+    
 </body>
 </html>
