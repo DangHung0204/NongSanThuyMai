@@ -8,7 +8,6 @@
     <style>
         * {
             box-sizing: border-box;
-            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
         }
@@ -110,12 +109,34 @@
         }
 
         footer {
-            background: #28a745;
-            color: white;
-            text-align: center;
-            padding: 1rem;
-            margin-top: 2rem;
-        }
+        background: #218838;
+        color: white;
+        text-align: center;
+        padding: 1rem;
+        margin-top: 2rem;
+    }
+
+    footer nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 1rem;
+        padding: 0;
+    }
+
+    footer nav ul li {
+        padding: 0 1rem;
+    }
+
+    footer nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    footer nav ul li a:hover {
+        text-decoration: underline;
+    }
     </style>
 </head>
 <body>
@@ -130,6 +151,7 @@
             <li><a href="products.html">Sản Phẩm</a></li>
             <li><a href="contact.html">Liên Hệ</a></li>
             <li><a href="about.html">Giới Thiệu</a></li>
+            <li><a href="blog.html">Blog</a></li>
         </ul>
     </nav>
 
@@ -160,9 +182,22 @@
         </form>
     </div>
 
+        <!-- Thanh điều hướng ở cuối trang -->
     <footer>
-        <p>&copy; 2024 Nông Sản Thúy Mai. Mọi quyền được bảo lưu.</p>
+        <nav>
+            <ul>
+                <li><a href="buying-guide.html">Hướng Dẫn Mua Hàng</a></li>
+                <li><a href="payment-guide.html">Hướng Dẫn Thanh Toán</a></li>
+                <li><a href="terms.html">Điều Khoản Dịch Vụ</a></li>
+                <li><a href="privacy-policy.html">Chính Sách Quyền Riêng Tư</a></li>
+                <li><a href="payment-policy.html">Chính Sách Thanh Toán</a></li>
+                <li><a href="return-policy.html">Chính Sách Hoàn Trả</a></li>
+            </ul>
+        </nav>
+
+        <p>&copy; 2024 Cửa Hàng Nông Sản. Mọi quyền được bảo lưu.</p>
     </footer>
+
 
 </body>
 </html>
